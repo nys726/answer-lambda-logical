@@ -1,0 +1,50 @@
+{
+    "info": {
+        "name": "check_empty_one",
+        "version": "1.0.0",
+        "category": "logical",
+        "keywords": [
+            "string", "clock", "log"
+        ],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "dependencies": [],
+        "engines": ">=1.0.2",
+        "environment": {},
+        "titles": {
+            "en": "Check empty (1 input)",
+            "ko": "Empty 확인 (1 input)"
+        },
+        "descriptions": {
+            "en": "",
+            "ko": ""
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "controls": {
+        "input": "data",
+        "output": "result"
+    },
+    "props": [
+        {
+            "rule": "read_and_write",
+            "name": "reverse",
+            "default_value": "False",
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Reverse",
+                "ko": "결과 전환"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        }
+    ]
+}
