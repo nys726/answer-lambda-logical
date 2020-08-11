@@ -1,0 +1,50 @@
+{
+    "info": {
+        "name": "check_empty_different_result",
+        "version": "1.0.0",
+        "category": "logical",
+        "keywords": [
+            "logic"
+        ],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "dependencies": [],
+        "engines": ">=1.0.2",
+        "environment": {},
+        "titles": {
+            "en": "Check empty (a different result)",
+            "ko": "Empty 확인 (다른 결과)"
+        },
+        "descriptions": {
+            "en": "",
+            "ko": ""
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "controls": {
+        "input": ["condition", "true_data", "false_data"],
+        "output": "result"
+    },
+    "props": [
+        {
+            "rule": "read_and_write",
+            "name": "reverse",
+            "default_value": "False",
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Reverse",
+                "ko": "결과 전환"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        }
+    ]
+}
