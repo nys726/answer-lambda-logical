@@ -1,0 +1,48 @@
+{
+    "info": {
+        "name": "passing_data_if_not_empty",
+        "version": "1.0.0",
+        "category": "logical",
+        "keywords": [
+            "logic"
+        ],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "dependencies": [],
+        "engines": ">=1.0.2",
+        "environment": {},
+        "titles": {
+            "en": "Passing Data",
+            "ko": "데이터 전달"
+        },
+        "descriptions": {
+            "en": "",
+            "ko": ""
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "controls": {
+        "input": ["check_value", "data"],
+        "output": "result"
+    },
+    "props": [{
+        "rule": "read_and_write",
+        "name": "block_passing_data",
+        "default_value": "False",
+        "type": "bool",
+        "required": true,
+        "valid": {},
+        "title": {
+            "en": "Block passing data",
+            "ko": "데이터 전달 차단 여부"
+        },
+        "help": {
+            "en": "When the 'check_value' is None, It blocks passing the data.",
+            "ko": "'check_value'가 None 일때, 데이터 전달을 차단한다."
+        }
+    }]
+}
