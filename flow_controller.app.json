@@ -1,0 +1,52 @@
+{
+    "info": {
+        "name": "flow_controller",
+        "version": "1.0.0",
+        "category": "logical",
+        "keywords": [
+            "string", "clock", "log"
+        ],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "dependencies": [],
+        "engines": ">=1.0.2",
+        "environment": {},
+        "titles": {
+            "en": "Lamdba controller",
+            "ko": "Lambda 제어기"
+        },
+        "descriptions": {
+            "en": "",
+            "ko": ""
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "controls": {
+        "input": "data",
+        "output": "result"
+    },
+    "props": [
+        {
+            "rule": "read_and_write",
+            "name": "control_setting",
+            "default_value": "Pass",
+            "type": "str",
+            "required": true,
+            "valid": {
+                "list": "None;Pass;Block"
+            },
+            "title": {
+                "en": "Control setting",
+                "ko": "Control setting"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        }
+    ]
+}
