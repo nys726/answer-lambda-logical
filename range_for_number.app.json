@@ -1,0 +1,131 @@
+{
+    "info": {
+        "name": "range_for_number",
+        "version": "1.0.0",
+        "category": "logical",
+        "keywords": [
+            "number"
+        ],
+        "homepage": "https://answer.bogonets.com/",
+        "bugs": "https://answer.bogonets.com/",
+        "license": "Bogonet License",
+        "author": "wooruang",
+        "dependencies": [],
+        "engines": ">=1.0.2",
+        "environment": {},
+        "titles": {
+            "en": "Check Range for number",
+            "ko": "숫자 범위 확인"
+        },
+        "descriptions": {
+            "en": "",
+            "ko": ""
+        },
+        "documentation_mime": "text",
+        "documentations": {},
+        "meta": {}
+    },
+    "controls": {
+        "input": "number",
+        "output": "result"
+    },
+    "props": [
+        {
+            "rule": "read_and_write",
+            "name": "reverse",
+            "default_value": false,
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Reverse",
+                "ko": "결과 반전"
+            },
+            "help": {
+                "en": "",
+                "ko": ""
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "block_data",
+            "default_value": false,
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Block data",
+                "ko": "데이터 전달 차단 여부"
+            },
+            "help": {
+                "en": "When the 'number' is None or is not in a range, It blocks the result.",
+                "ko": "'number'가 None 이거나 범위에 들어오지 않을때, 데이터 전달을 차단한다."
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "range_start",
+            "default_value": "0.0",
+            "type": "float",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Start Range",
+                "ko": "시작 범위"
+            },
+            "help": {
+                "en": "start <= x",
+                "ko": "start <= x"
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "enable_range_start",
+            "default_value": true,
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Enable Start Range",
+                "ko": "시작 범위 지정 여부"
+            },
+            "help": {
+                "en": " ~ x",
+                "ko": " ~ x"
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "range_end",
+            "default_value": "0.0",
+            "type": "float",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "End Range",
+                "ko": "끝 범위"
+            },
+            "help": {
+                "en": "x <= end",
+                "ko": "x <= end"
+            }
+        },
+        {
+            "rule": "read_and_write",
+            "name": "enable_range_end",
+            "default_value": true,
+            "type": "bool",
+            "required": true,
+            "valid": {},
+            "title": {
+                "en": "Enable End Range",
+                "ko": "끝 범위 지정 여부"
+            },
+            "help": {
+                "en": "x ~ ",
+                "ko": "x ~ "
+            }
+        }
+
+    ]
+}
