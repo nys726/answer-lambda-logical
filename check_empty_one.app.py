@@ -4,19 +4,26 @@ import numpy as np
 import time
 import sys
 
-
+block_data = True
 reverse = False
+
+true_str_list = ['true']
 
 
 def on_set(key, val):
     if key == "reverse":
         global reverse
-        reverse = val
+        reverse = True if val.lower() in true_str_list else False
+    elif key == "block_data":
+        global block_data
+        block_data = True if val.lower() in true_str_list else False
 
 
 def on_get(key):
     if key == "reverse":
-        return reverse
+        return str(reverse)
+    elif key == "block_data":
+        return str(block_data)
 
 
 def on_run(data):
@@ -26,24 +33,28 @@ def on_run(data):
     # sys.stdout.write(f"[check_empty] data: {data}\n")
     # sys.stdout.flush()
 
-    if isinstance(data, str):
-        if data:
-            # sys.stdout.write(f"[check_empty] string True\n")
-            # sys.stdout.flush()
-            return {'result': data}
-        else:
-            # sys.stdout.write(f"[check_empty] string False\n")
-            # sys.stdout.flush()
-            return {}
-    else:
-        # sys.stdout.write(f"[check_empty] condition.shape: {condition.shape}\n")
+    # Positive.
+    # d: T , r: F
+    # d: F , r: T
+    if (data.shape and not reverse) or (not data.shape and reverse):
+        # sys.stdout.write(f"[check_empty] numpy True\n")
         # sys.stdout.flush()
-        if data.shape:
-            # sys.stdout.write(f"[check_empty] numpy True\n")
-            # sys.stdout.flush()
-            return {'result': data}
-        else:
-            # sys.stdout.write(f"[check_empty] numpy False\n")
-            # sys.stdout.flush()
-            return {}
+        return return_positive(data)
+    # Negative.
+    # d: F , r: F
+    # d: T , r: T
+    else:
+        # sys.stdout.write(f"[check_empty] numpy False\n")
+        # sys.stdout.flush()
+        return return_negative()
+
+
+def return_positive(data):
+    return {'result': data}
+
+def return_negative():
+    if block_data:
+        return {}
+    else:
+        return {'result': None}
 
